@@ -1,10 +1,10 @@
-<script setup></script>
+<script setup>
+import Aside from './components/Aside.vue';
+</script>
 
 <template>
   <div class="container">
-    <div class="aside">
-      <h1>Yuliya Kalashnikova</h1>
-    </div>
+    <Aside />
     <div class="main-block">
       <h2>тут учеба</h2>
     </div>
