@@ -2,7 +2,12 @@
 
 <template>
   <div class="container">
-    <h1>Resume</h1>
+    <div class="aside">
+      <h1>Yuliya Kalashnikova</h1>
+    </div>
+    <div class="main-block">
+      <h2>тут учеба</h2>
+    </div>
   </div>
 </template>
 
@@ -10,5 +15,7 @@
 .container {
   max-width: 594px;
   margin: 0 auto;
+  display: flex;
 }
+
 </style>
