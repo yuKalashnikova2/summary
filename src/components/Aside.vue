@@ -7,14 +7,16 @@ export default {
           img: 'email',
           subtitle: 'Email',
           text: 'pmalian@list.ru',
+          href: 'mailto',
         },
         {
           img: 'link',
           subtitle: 'Website',
           text: 'https://github.com/yuKalashnikova2',
+          href: 'https://github.com/yuKalashnikova2',
         },
         { img: 'location', subtitle: 'Address', text: 'Moscow, Russia' },
-        { img: 'phone', subtitle: 'Phone', text: '+79855679856' },
+        { img: 'tel', subtitle: 'Phone', text: '+79858542579', href: 'tel' },
       ],
       socials: [
         {
@@ -50,9 +52,9 @@ export default {
         { img: 'inbox', text: 'Blogging' },
       ],
       personalDetails: [
-        { subtitle: 'Olga Nikolaevna', text: 'Mother’s Name:' },
-        { subtitle: 'Lev Leontevich', text: 'Father’s Name:' },
-        { subtitle: '20 - 01 - 1994', text: 'D.O.B. :' },
+        { subtitle: ' Olga Nikolaevna', text: 'Mother’s Name : ' },
+        { subtitle: ' Lev Leontevich', text: 'Father’s Name :  ' },
+        { subtitle: ' 20 - 01 - 1994', text: 'D.O.B. : ' },
       ],
     }
   },
@@ -66,9 +68,9 @@ export default {
     </header>
 
     <p class="aside__about">
-      A well-organized, creative and goaloriented graduate possessing excellent
-      communication, problem-solving and leadership skills with a flair to
-      explore Computer Science Engineering
+      Frontend - developer. Technology stack: Git; JavaScript/TypeScript, СSS,
+      HTML; BEM, SASS, SCSS; Vue ( Vue3, Vue-router); Vuex, Pinia; Understanding
+      of client-server architecture, experience interacting with APIs.
     </p>
 
     <div class="aside__main">
@@ -79,7 +81,7 @@ export default {
           >
             <img
               :src="'src/assets/svg/' + item.img + '.svg'"
-              alt="email"
+              :alt="item.img"
               width="10"
               height="10"
             />
@@ -88,7 +90,7 @@ export default {
           <div class="aside__infos__card-subtitle">
             <div class="subtitle">{{ item.subtitle }}</div>
             <a
-              :href="`${item.text}`"
+              :href="`${item.href}`"
               :class="[
                 'subtitle-text',
                 item.subtitle === 'Website' ? 'underline' : '',
@@ -156,9 +158,9 @@ export default {
       <div class="aside__personal-details gap-8">
         <div class="subtitle">Personal Details</div>
         <div class="aside__infos__card" v-for="personal in personalDetails">
-          <div class="subtitle-text">{{ personal.text }}</div>
+          <span class="subtitle-text">{{ personal.text }} </span>
 
-          <div class="subtitle">{{ personal.subtitle }}</div>
+          <span class="subtitle"> {{ personal.subtitle }}</span>
         </div>
       </div>
     </div>
@@ -246,14 +248,5 @@ export default {
 }
 .aside__block_border-gray {
   border-top: 1px solid #e2e6ee;
-}
-.gap-8 {
-  gap: 10px;
-}
-.gap-10 {
-  gap: 10px;
-}
-.gap-12 {
-  gap: 12px;
 }
 </style>

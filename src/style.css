@@ -43,3 +43,12 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
+.gap-8 {
+  gap: 10px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-12 {
+  gap: 12px;
+}
