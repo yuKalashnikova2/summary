@@ -38,6 +38,22 @@ export default {
           text: '@yul-vilaya-965a67279',
         },
       ],
+      languages: [
+        { img: 'flag-1', subtitle: 'Native', text: 'Russian' },
+        { img: 'flag-3', subtitle: 'Professional working', text: 'English' },
+        { img: 'flag-2', subtitle: 'Elementary', text: 'Spanish' },
+      ],
+      hobbies: [
+        { img: 'play', text: 'Gaming' },
+        { img: 'earth', text: 'Traveling' },
+        { img: 'brush', text: 'Sketching/Graffitti' },
+        { img: 'inbox', text: 'Blogging' },
+      ],
+      personalDetails: [
+        { subtitle: 'Olga Nikolaevna', text: 'Mother’s Name:' },
+        { subtitle: 'Lev Leontevich', text: 'Father’s Name:' },
+        { subtitle: '20 - 01 - 1994', text: 'D.O.B. :' },
+      ],
     }
   },
 }
@@ -56,9 +72,11 @@ export default {
     </p>
 
     <div class="aside__main">
-      <div class="aside__infos aside__block gap-12">
+      <div class="aside__infos aside__block aside__block_border-gray gap-12">
         <div class="aside__infos__card" v-for="item in infos">
-          <div class="aside__infos__card-img">
+          <div
+            class="aside__infos__card-img aside__infos__card-img_background-gray"
+          >
             <img
               :src="'src/assets/svg/' + item.img + '.svg'"
               alt="email"
@@ -81,7 +99,7 @@ export default {
         </div>
       </div>
 
-      <div class="aside__socials aside__block gap-10">
+      <div class="aside__socials aside__block aside__block_border-gray gap-10">
         <div class="subtitle">Socials</div>
         <div class="aside__infos__card" v-for="social in socials">
           <div class="aside__infos__card-img">
@@ -97,6 +115,50 @@ export default {
               social.text
             }}</a>
           </div>
+        </div>
+      </div>
+
+      <div
+        class="aside__languages aside__block aside__block_border-gray gap-10"
+      >
+        <div class="subtitle">Languages</div>
+        <div class="aside__infos__card" v-for="language in languages">
+          <div class="aside__infos__card-img">
+            <img
+              :src="'src/assets/svg/flags/' + language.img + '.svg'"
+              alt="email"
+            />
+          </div>
+
+          <div class="aside__infos__card-subtitle">
+            <div class="subtitle-text">{{ language.text }}</div>
+            <div class="subtitle">{{ language.subtitle }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__hobbies gap-8">
+        <div class="subtitle">Hobbies & Interests</div>
+        <div class="aside__infos__card" v-for="hobbie in hobbies">
+          <div class="aside__infos__card-img">
+            <img
+              :src="'src/assets/svg/hobbies/' + hobbie.img + '.svg'"
+              :alt="hobbie.img"
+            />
+          </div>
+
+          <div class="aside__infos__card-subtitle">
+            <div class="subtitle-text">{{ hobbie.text }}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__personal-details gap-8">
+        <div class="subtitle">Personal Details</div>
+        <div class="aside__infos__card" v-for="personal in personalDetails">
+          <div class="subtitle-text">{{ personal.text }}</div>
+
+          <div class="subtitle">{{ personal.subtitle }}</div>
         </div>
       </div>
     </div>
@@ -139,10 +201,11 @@ export default {
     &__card {
       display: flex;
       word-break: break-all;
+      align-items: center;
       &-img {
         width: 16px;
         height: 16px;
-        background-color: #e2e6ee;
+
         border-radius: 100%;
         display: flex;
         justify-content: center;
@@ -156,18 +219,36 @@ export default {
   &__socials {
     border-top: 1px solid #e2e6ee;
   }
+  &__hobbies {
+    display: flex;
+    flex-direction: column;
+  }
+  &__personal-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 16px;
+  }
 }
 
 .aside__main {
   padding-right: 20px;
+  padding-bottom: 30px;
 }
 .aside__block {
   display: flex;
   flex-direction: column;
-  // gap: 12px;
-  border-top: 1px solid #e2e6ee;
+
   padding-top: 16px;
   padding-bottom: 16px;
+}
+.aside__infos__card-img_background-gray {
+  background-color: #e2e6ee;
+}
+.aside__block_border-gray {
+  border-top: 1px solid #e2e6ee;
+}
+.gap-8 {
+  gap: 10px;
 }
 .gap-10 {
   gap: 10px;
