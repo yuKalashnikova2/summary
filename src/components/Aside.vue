@@ -16,6 +16,28 @@ export default {
         { img: 'location', subtitle: 'Address', text: 'Moscow, Russia' },
         { img: 'phone', subtitle: 'Phone', text: '+79855679856' },
       ],
+      socials: [
+        {
+          img: 'instagram',
+          subtitle: 'Instagram',
+          text: '@yuKalashnikova2',
+        },
+        {
+          img: 'github',
+          subtitle: 'Github',
+          text: '@yuKalashnikova2',
+        },
+        {
+          img: '5',
+          subtitle: 'Twitter',
+          text: '@yuKalashnikova2',
+        },
+        {
+          img: 'li',
+          subtitle: 'Linkedin',
+          text: '@yul-vilaya-965a67279',
+        },
+      ],
     }
   },
 }
@@ -34,15 +56,46 @@ export default {
     </p>
 
     <div class="aside__main">
-      <div class="aside__infos">
+      <div class="aside__infos aside__block gap-12">
         <div class="aside__infos__card" v-for="item in infos">
           <div class="aside__infos__card-img">
-            <img :src="'src/assets/svg/' + item.img + '.svg'" alt="email" />
+            <img
+              :src="'src/assets/svg/' + item.img + '.svg'"
+              alt="email"
+              width="10"
+              height="10"
+            />
           </div>
 
           <div class="aside__infos__card-subtitle">
             <div class="subtitle">{{ item.subtitle }}</div>
-            <a :href="`${item.text}`" class="subtitle-text">{{ item.text }}</a>
+            <a
+              :href="`${item.text}`"
+              :class="[
+                'subtitle-text',
+                item.subtitle === 'Website' ? 'underline' : '',
+              ]"
+              >{{ item.text }}</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="aside__socials aside__block gap-10">
+        <div class="subtitle">Socials</div>
+        <div class="aside__infos__card" v-for="social in socials">
+          <div class="aside__infos__card-img">
+            <img
+              :src="'src/assets/svg/social/' + social.img + '.svg'"
+              alt="email"
+            />
+          </div>
+
+          <div class="aside__infos__card-subtitle">
+            <div class="subtitle">{{ social.subtitle }}</div>
+            <a :href="`${social.text}`" class="subtitle-text underline">{{
+              social.text
+            }}</a>
           </div>
         </div>
       </div>
@@ -83,12 +136,6 @@ export default {
     padding-bottom: 5px;
   }
   &__infos {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    border-top: 1px solid #e2e6ee;
-    padding-top: 16px;
-    padding-bottom: 16px;
     &__card {
       display: flex;
       word-break: break-all;
@@ -100,20 +147,32 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        // margin-right: 8px;
-        & img {
-          width: 10px;
-          height: 10px;
-        }
       }
       &-subtitle {
         margin-left: 8px;
       }
     }
   }
+  &__socials {
+    border-top: 1px solid #e2e6ee;
+  }
 }
 
 .aside__main {
   padding-right: 20px;
+}
+.aside__block {
+  display: flex;
+  flex-direction: column;
+  // gap: 12px;
+  border-top: 1px solid #e2e6ee;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.gap-10 {
+  gap: 10px;
+}
+.gap-12 {
+  gap: 12px;
 }
 </style>

@@ -20,23 +20,26 @@ h1 {
 
 img {
   display: block;
-  width: 100%;
 }
 a {
-  text-decoration: underline;
+  text-decoration: none;
   display: block;
-  cursor: pointer;
 }
 .subtitle {
   font-size: 6px;
   line-height: 8px;
   font-weight: 400;
   letter-spacing: 1%;
-  color: #79819A;
+  color: #79819a;
 }
 .subtitle-text {
   font-size: 7px;
   line-height: 9px;
   font-weight: 500;
-  color: #47516B;
+  color: #47516b;
+}
+
+.underline {
+  text-decoration: underline;
+  cursor: pointer;
 }
