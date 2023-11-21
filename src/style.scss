@@ -31,12 +31,23 @@ a {
   font-weight: 400;
   letter-spacing: 1%;
   color: #79819a;
+  @media (max-width: 577px) {
+    font-size: 10px;
+    line-height: 12px;
+    font-weight: 400;
+  }
 }
 .subtitle-text {
   font-size: 7px;
   line-height: 9px;
   font-weight: 500;
   color: #47516b;
+
+  @media (max-width: 577px) {
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+  }
 }
 
 .underline {

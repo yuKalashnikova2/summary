@@ -1,5 +1,5 @@
 <script setup>
-import Aside from './components/Aside.vue';
+import Aside from './components/Aside.vue'
 </script>
 
 <template>
@@ -16,6 +16,10 @@ import Aside from './components/Aside.vue';
   max-width: 594px;
   margin: 0 auto;
   display: flex;
-}
 
+  @media (max-width: 577px) {
+    width: 100%;
+    flex-direction: column;
+  }
+}
 </style>

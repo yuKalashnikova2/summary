@@ -174,13 +174,22 @@ export default {
   background-color: #f7fcff;
   width: 176px;
   padding: 24px 4px 0 24px;
+  @media (max-width: 577px) {
+    width: 100%;
+  }
 
   &__header {
     margin-bottom: 16px;
+    @media (max-width: 577px) {
+      text-align: center;
+    }
     &-logo {
       border-radius: 100%;
       width: 48px;
       height: 48px;
+      @media (max-width: 577px) {
+        margin: 0 auto;
+      }
     }
     &-title {
       font-size: 16px;
@@ -189,6 +198,9 @@ export default {
       letter-spacing: -2%;
       color: #2e2e48;
       padding-top: 8px;
+      @media (max-width: 577px) {
+        font-size: 25px;
+      }
     }
   }
   &__about {
@@ -198,6 +210,11 @@ export default {
     letter-spacing: 2%;
     line-height: 12px;
     padding-bottom: 5px;
+    @media (max-width: 577px) {
+      font-size: 12px;
+      line-height: 16px;
+      border-bottom: 1px solid #e2e6ee;
+    }
   }
   &__infos {
     &__card {
@@ -224,17 +241,29 @@ export default {
   &__hobbies {
     display: flex;
     flex-direction: column;
+    @media (max-width: 577px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   }
   &__personal-details {
     display: flex;
     flex-direction: column;
     padding-top: 16px;
+    @media (max-width: 577px) {
+      padding-top: 10px;
+    }
   }
 }
 
 .aside__main {
   padding-right: 20px;
   padding-bottom: 30px;
+  @media (max-width: 577px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 .aside__block {
   display: flex;
@@ -242,11 +271,18 @@ export default {
 
   padding-top: 16px;
   padding-bottom: 16px;
+  @media (max-width: 577px) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .aside__infos__card-img_background-gray {
   background-color: #e2e6ee;
 }
 .aside__block_border-gray {
   border-top: 1px solid #e2e6ee;
+  @media (max-width: 577px) {
+    border-top: none;
+  }
 }
 </style>
