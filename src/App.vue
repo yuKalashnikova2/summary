@@ -1,11 +1,12 @@
 <script>
 import Aside from './components/Aside.vue'
 import MainBlock from './components/MainBlock.vue'
-
+import EducationSection from './components/EducationSection.vue'
 export default {
   components: {
     MainBlock,
-    Aside
+    Aside,
+    EducationSection
   },
   data() {
     return {
@@ -42,7 +43,12 @@ export default {
     <div class="content">
       <MainBlock v-for="(headers, index) in headersMainBlock"
       :key="headers.id"
-      :header="headers.title"     />
+      :header="headers.title">
+      <EducationSection :header="headers.title"  />
+    </MainBlock>
+    <MainBlock>
+      <Aside />
+    </MainBlock>
     </div>
 
   </div>
