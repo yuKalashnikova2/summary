@@ -63,3 +63,10 @@ a {
 .gap-12 {
   gap: 12px;
 }
+
+.main__block {
+  display: flex;
+  & > *:not(:last-child) {
+    margin-right: 16px;
+  }
+}

@@ -1,14 +1,50 @@
-<script setup>
+<script>
 import Aside from './components/Aside.vue'
-import Education from './components/Education.vue'
+import MainBlock from './components/MainBlock.vue'
+
+export default {
+  components: {
+    MainBlock,
+    Aside
+  },
+  data() {
+    return {
+      headersMainBlock: [
+        {
+          id: 1,
+          title: 'Education'
+        },
+        {
+          id: 2,
+          title: 'Achievements'
+        },
+        {
+          id: 3,
+          title: 'Tools/Skills'
+        },   {
+          id: 4,
+          title: 'Latest projects'
+        },
+        {
+          id: 5,
+          title: 'Certificates & Awards'
+        }
+      ],
+    }
+  },
+}
+
 </script>
 
 <template>
   <div class="container">
     <Aside />
     <div class="content">
-        <Education />
+      <MainBlock v-for="(headers, index) in headersMainBlock"
+      :key="headers.id"
+      :header="headers.title"     />
     </div>
+
   </div>
 </template>
 
