@@ -1,8 +1,10 @@
 <script>
 import ContentTitle from './ContentTitle.vue'
+import EducationCard from './EducationCard.vue'
 export default {
   components: {
     ContentTitle,
+    EducationCard,
   },
 }
 </script>
@@ -12,7 +14,16 @@ export default {
     <ContentTitle title="Education" />
 
     <div class="education__cards">
-      <div>я имитация карточки</div>
+      <EducationCard
+        title="Kemerovo State University"
+        date="2011 - 2015"
+        percentage="100"
+        name="Computer Science and ICT (pedagogical education)"
+        images="university"
+      />
+      <EducationCard />
+      <EducationCard />
+      <EducationCard />
     </div>
   </div>
 </template>
@@ -20,9 +31,11 @@ export default {
 <style lang="scss">
 .education {
   &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
     margin-top: 16px;
     margin-bottom: 24px;
-    border: 1px solid red;
   }
 }
 </style>
