@@ -36,6 +36,9 @@ export default {
     gap: 4px;
     margin-top: 16px;
     margin-bottom: 24px;
+    @media (max-width: 577px) {
+      flex-direction: column;
+    }
   }
 }
 </style>
