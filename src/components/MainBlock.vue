@@ -1,39 +1,16 @@
 <script>
 import ContentTitle from './ContentTitle.vue'
+import Divider from './Divider.vue'
 import EducationCard from './EducationCard.vue'
 export default {
   components: {
     ContentTitle,
     EducationCard,
+    Divider
   },
   props: {
     header: String,
   },
-  // data() {
-  //   return {
-  //     headersMainBlock: [
-  //       {
-  //         id: 1,
-  //         title: 'Education'
-  //       },
-  //       {
-  //         id: 2,
-  //         title: 'Achievements'
-  //       },
-  //       {
-  //         id: 3,
-  //         title: 'Tools/Skills'
-  //       },   {
-  //         id: 4,
-  //         title: 'Latest projects'
-  //       },
-  //       {
-  //         id: 5,
-  //         title: 'Certificates & Awards'
-  //       }
-  //     ],
-  //   }
-  // },
 }
 </script>
 
