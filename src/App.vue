@@ -1,12 +1,13 @@
 <script setup>
 import Aside from './components/Aside.vue'
+import ContentTitle from './components/ContentTitle.vue';
 </script>
 
 <template>
   <div class="container">
     <Aside />
-    <div class="main-block">
-      <h2>тут учеба</h2>
+    <div class="content">
+      <ContentTitle title="Education" />
     </div>
   </div>
 </template>
@@ -21,5 +22,9 @@ import Aside from './components/Aside.vue'
     width: 100%;
     flex-direction: column;
   }
+}
+.content {
+  padding: 32px 24px 2px 16px;
+  background-color: #FFF;
 }
 </style>
