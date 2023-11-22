@@ -1,13 +1,13 @@
 <script setup>
 import Aside from './components/Aside.vue'
-import ContentTitle from './components/ContentTitle.vue';
+import Education from './components/Education.vue'
 </script>
 
 <template>
   <div class="container">
     <Aside />
     <div class="content">
-      <ContentTitle title="Education" />
+        <Education />
     </div>
   </div>
 </template>

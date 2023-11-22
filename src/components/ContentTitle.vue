@@ -13,7 +13,6 @@ export default {
 <style lang="scss">
 .content__title {
   color: #2e2e48;
-  text-align: center;
   font-family: 'Outfit', sans-serif;
   font-size: 12px;
   font-style: normal;
