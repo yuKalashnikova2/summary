@@ -28,6 +28,7 @@ export default {
 .education__cards__item {
   background-color: #f7f9fc;
   padding: 8px 12px;
+  max-width: 113px;
   &__logo {
     display: flex;
     align-items: center;
