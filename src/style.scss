@@ -40,7 +40,7 @@ a {
     font-size: 5px;
     letter-spacing: 0.05px;
     &_dark {
-      color: #47516B;
+      color: #47516b;
     }
   }
 }
@@ -50,7 +50,7 @@ a {
   font-weight: 500;
   color: #47516b;
   &_black {
-    color: #2E2E48;
+    color: #2e2e48;
   }
 
   @media (max-width: 577px) {
@@ -78,5 +78,18 @@ a {
   display: flex;
   & > *:not(:last-child) {
     margin-right: 16px;
+  }
+}
+.section {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+
+    @media (max-width: 577px) {
+      flex-direction: column;
+    }
   }
 }

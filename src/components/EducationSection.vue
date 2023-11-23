@@ -1,50 +1,32 @@
 <script>
-import ContentTitle from './ContentTitle.vue';
-import EducationCard from './EducationCard.vue';
+import ContentTitle from './ContentTitle.vue'
+import EducationCard from './EducationCard.vue'
 export default {
-    props: {
+  props: {
     header: String,
   },
-components: {
+  components: {
     EducationCard,
-    ContentTitle
+    ContentTitle,
   },
 }
-
 </script>
 
 <template>
-     <div class="education">
-      <ContentTitle :title="header" />
+  <div class="section">
+    <ContentTitle :title="header" />
 
-      <div class="education__cards">
-        <EducationCard
-          title="Kemerovo State University"
-          date="2011 - 2015"
-          percentage="100"
-          name="Computer Science and ICT (pedagogical education)"
-          images="university"
-        />
-        <EducationCard />
-        <EducationCard />
-        <EducationCard />
-      </div>
+    <div class="section__cards">
+      <EducationCard
+        title="Kemerovo State University"
+        date="2011 - 2015"
+        percentage="100"
+        name="Computer Science and ICT (pedagogical education)"
+        images="university"
+      />
+      <EducationCard />
+      <EducationCard />
+      <EducationCard />
     </div>
+  </div>
 </template>
-<style lang="scss">
-.education {
-  &__cards {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    margin-top: 16px;
-    margin-bottom: 24px;
-
-    @media (max-width: 577px) {
-      flex-direction: column;
-    }
-  }
-}
-</style>
-
-

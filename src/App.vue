@@ -6,51 +6,54 @@ export default {
   components: {
     MainBlock,
     Aside,
-    EducationSection
+    EducationSection,
   },
   data() {
     return {
       headersMainBlock: [
         {
           id: 1,
-          title: 'Education'
+          title: 'Education',
+          type: 1,
         },
         {
           id: 2,
-          title: 'Achievements'
+          title: 'Achievements',
+          type: 2,
         },
         {
           id: 3,
-          title: 'Tools/Skills'
-        },   {
+          title: 'Tools/Skills',
+          type: 3,
+        },
+        {
           id: 4,
-          title: 'Latest projects'
+          title: 'Latest projects',
+          type: 4,
         },
         {
           id: 5,
-          title: 'Certificates & Awards'
-        }
+          title: 'Certificates & Awards',
+          type: 5,
+        },
       ],
     }
   },
 }
-
 </script>
 
 <template>
   <div class="container">
     <Aside />
     <div class="content">
-      <MainBlock v-for="(headers, index) in headersMainBlock"
-      :key="headers.id"
-      :header="headers.title">
-      <EducationSection :header="headers.title"  />
-    </MainBlock>
-    <MainBlock>
-
-    </MainBlock>
+      <MainBlock
+        v-for="(headers, index) in headersMainBlock"
+        :key="headers.id"
+        :header="headers.title"
+      >
+        <EducationSection :header="headers.title" v-if="headers.type == 1" />
+      </MainBlock>
     </div>
-
   </div>
 </template>
 
@@ -67,6 +70,6 @@ export default {
 }
 .content {
   padding: 32px 24px 2px 16px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 </style>
