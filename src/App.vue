@@ -2,11 +2,13 @@
 import Aside from './components/Aside.vue'
 import MainBlock from './components/MainBlock.vue'
 import EducationSection from './components/EducationSection.vue'
+import AchievementsSection from './components/AchievementsSection.vue'
 export default {
   components: {
     MainBlock,
     Aside,
     EducationSection,
+    AchievementsSection,
   },
   data() {
     return {
@@ -52,6 +54,7 @@ export default {
         :header="headers.title"
       >
         <EducationSection :header="headers.title" v-if="headers.type == 1" />
+        <AchievementsSection :header="headers.title" v-if="headers.type == 2" />
       </MainBlock>
     </div>
   </div>
