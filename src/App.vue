@@ -47,7 +47,7 @@ export default {
       <EducationSection :header="headers.title"  />
     </MainBlock>
     <MainBlock>
-      <Aside />
+
     </MainBlock>
     </div>
 

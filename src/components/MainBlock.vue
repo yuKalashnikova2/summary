@@ -9,17 +9,16 @@ export default {
     EducationCard,
     Divider
   },
-  // props: {
-  //   header: String,
-  // },
+  props: {
+    header: String,
+  },
 }
 </script>
 
 <template>
   <div class="main__block">
     <Divider />
-    <slot></slot>
-   
+    <slot :header="header"></slot>
   </div>
 </template>
 

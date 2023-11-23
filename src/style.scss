@@ -34,7 +34,14 @@ a {
   @media (max-width: 577px) {
     font-size: 10px;
     line-height: 12px;
-    font-weight: 400;
+  }
+  &_font-small {
+    color: #79819a;
+    font-size: 5px;
+    letter-spacing: 0.05px;
+    &_dark {
+      color: #47516B;
+    }
   }
 }
 .subtitle-text {
@@ -42,6 +49,9 @@ a {
   line-height: 9px;
   font-weight: 500;
   color: #47516b;
+  &_black {
+    color: #2E2E48;
+  }
 
   @media (max-width: 577px) {
     font-size: 11px;

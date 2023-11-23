@@ -1,12 +1,30 @@
+<script>
+export default {
+  props: {
+    isCard: Boolean,
+  },
+}
+</script>
+
 <template>
   <div class="divider__block">
-    <div class="divider__block__circle">
-      <div class="divider__block__circle__inside">
-        <img src="../assets/svg/circle-inside.svg" alt="circle" />
+    <div
+      :class="['divider__block__circle', isCard ? 'divider__card__circle' : '']"
+    >
+      <div
+        :class="[
+          'divider__block__circle__inside',
+          isCard ? 'divider__card__circle__inside' : '',
+        ]"
+      >
+        <img src="../assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
+        <img src="../assets/svg/circle-inside.svg" alt="circle" v-else />
       </div>
     </div>
 
-    <div class="divider__block__band"></div>
+    <div
+      :class="['divider__block__band', isCard ? 'divider__card__band' : '']"
+    ></div>
   </div>
 </template>
 
@@ -37,6 +55,19 @@
     width: 0.5px;
     flex: 1 0 0;
     background-color: #e2e6ee;
+  }
+}
+
+.divider__card {
+  &__circle {
+    box-shadow: none;
+    &__inside {
+      width: 7.5px;
+      height: 7.5px;
+    }
+  }
+  &__band {
+    background-color: #f7f9fc;
   }
 }
 </style>
