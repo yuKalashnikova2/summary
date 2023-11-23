@@ -7,7 +7,11 @@ export default {
     }
   },
   props: {
-    header: String,
+    subtitle: String,
+    title: String,
+    date: String,
+    decription: String,
+    logo: String,
   },
   components: {
     Divider,
@@ -21,7 +25,7 @@ export default {
       <div class="achievements__cards__item-content__experience">
         <div class="achievements__cards__item-content__experience-date">
           <div class="subtitle_font-small subtitle_font-small_dark">
-            Oct 2021 - Nov 2021
+            {{ date }}
           </div>
           <div
             class="achievements__cards__item-content__experience-date__online"
@@ -38,8 +42,8 @@ export default {
 
         <div class="achievements__cards__item-content__experience-title">
           <img
-            src="../assets/svg/social/github.svg"
-            alt="github"
+            :src="'src/assets/svg/social/' + logo + '.svg'"
+            :alt="logo"
             class="achievements__cards__item-content__experience-title__img"
             width="25"
             height="25"
@@ -47,17 +51,15 @@ export default {
           <div
             class="achievements__cards__item-content__experience-title__text"
           >
-            <div class="subtitle">Hacktoberfest Contributor</div>
-            <div class="subtitle-text subtitle-text_black">Github</div>
+            <div class="subtitle">{{ subtitle }}</div>
+            <div class="subtitle-text subtitle-text_black">{{ title }}</div>
           </div>
         </div>
       </div>
 
       <div class="achievements__cards__item-content__description">
         <p class="subtitle_font-small">
-          Contributed 8 PR’s in various open source projects. Great experience
-          and learning alot about working with Github and open-source.
-          Connecting with developers
+          {{ decription }}
         </p>
       </div>
     </div>
