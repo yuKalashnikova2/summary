@@ -5,6 +5,7 @@ import EducationSection from './components/EducationSection.vue'
 import AchievementsSection from './components/AchievementsSection.vue'
 import ToolsSection from './components/ToolsSection.vue'
 import LatestProdjectsSection from './components/LatestProdjectsSection.vue'
+import SertificateSection from './components/SertificateSection.vue'
 export default {
   components: {
     MainBlock,
@@ -12,7 +13,8 @@ export default {
     EducationSection,
     AchievementsSection,
     ToolsSection,
-    LatestProdjectsSection
+    LatestProdjectsSection,
+    SertificateSection
 },
   data() {
     return {
@@ -61,6 +63,7 @@ export default {
         <AchievementsSection :header="headers.title" v-if="headers.type == 2" />
         <ToolsSection :header="headers.title" v-if="headers.type == 3"  />
         <LatestProdjectsSection :header="headers.title" v-if="headers.type == 4" />
+        <SertificateSection :header="headers.title" v-if="headers.type == 5" />
       </MainBlock>
     </div>
   </div>
@@ -78,6 +81,7 @@ export default {
   }
 }
 .content {
+  height: 100%;
   padding: 32px 24px 2px 16px;
   background-color: #fff;
 }
