@@ -4,14 +4,16 @@ import MainBlock from './components/MainBlock.vue'
 import EducationSection from './components/EducationSection.vue'
 import AchievementsSection from './components/AchievementsSection.vue'
 import ToolsSection from './components/ToolsSection.vue'
+import LatestProdjectsSection from './components/LatestProdjectsSection.vue'
 export default {
   components: {
     MainBlock,
     Aside,
     EducationSection,
     AchievementsSection,
-    ToolsSection
-  },
+    ToolsSection,
+    LatestProdjectsSection
+},
   data() {
     return {
       headersMainBlock: [
@@ -58,6 +60,7 @@ export default {
         <EducationSection :header="headers.title" v-if="headers.type == 1" />
         <AchievementsSection :header="headers.title" v-if="headers.type == 2" />
         <ToolsSection :header="headers.title" v-if="headers.type == 3"  />
+        <LatestProdjectsSection :header="headers.title" v-if="headers.type == 4" />
       </MainBlock>
     </div>
   </div>

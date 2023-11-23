@@ -34,6 +34,11 @@ a {
     font-size: 10px;
     line-height: 12px;
   }
+  &_font-medium {
+    font-size: 7px;
+    line-height: 9px;
+    letter-spacing: 0.07px;
+  }
   &_font-small {
     color: #79819a;
     font-size: 5px;
@@ -50,6 +55,10 @@ a {
   color: #47516b;
   &_black {
     color: #2e2e48;
+  }
+  &_medium {
+    font-size: 8px;
+    line-height: 10px; 
   }
 
   @media (max-width: 577px) {
@@ -92,6 +101,9 @@ a {
     gap: 4px;
     margin-top: 16px;
     margin-bottom: 24px;
+    &_gap-medium {
+      gap: 6px;
+    }
 
     @media (max-width: 577px) {
       flex-direction: column;
