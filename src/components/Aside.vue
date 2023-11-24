@@ -80,7 +80,7 @@ export default {
             class="aside__infos__card-img aside__infos__card-img_background-gray"
           >
             <img
-              :src="'src/assets/svg/' + item.img + '.svg'"
+              :src="'./src/assets/svg/' + item.img + '.svg'"
               :alt="item.img"
          
             />
@@ -105,7 +105,7 @@ export default {
         <div class="aside__infos__card" v-for="social in socials">
           <div class="aside__infos__card-img">
             <img
-              :src="'src/assets/svg/social/' + social.img + '.svg'"
+              :src="'./src/assets/svg/social/' + social.img + '.svg'"
               alt="email"
             />
           </div>
@@ -126,7 +126,7 @@ export default {
         <div class="aside__infos__card" v-for="language in languages">
           <div class="aside__infos__card-img">
             <img
-              :src="'src/assets/svg/flags/' + language.img + '.svg'"
+              :src="'./src/assets/svg/flags/' + language.img + '.svg'"
               alt="email"
             />
           </div>
@@ -143,7 +143,7 @@ export default {
         <div class="aside__infos__card" v-for="hobbie in hobbies">
           <div class="aside__infos__card-img">
             <img
-              :src="'src/assets/svg/hobbies/' + hobbie.img + '.svg'"
+              :src="'./src/assets/svg/hobbies/' + hobbie.img + '.svg'"
               :alt="hobbie.img"
             />
           </div>

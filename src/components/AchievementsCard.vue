@@ -42,7 +42,7 @@ export default {
 
         <div class="achievements__cards__item-content__experience-title">
           <img
-            :src="'src/assets/svg/social/' + logo + '.svg'"
+            :src="'./src/assets/svg/social/' + logo + '.svg'"
             :alt="logo"
             class="achievements__cards__item-content__experience-title__img"
             width="25"

@@ -13,7 +13,7 @@ export default {
 <template>
   <div class="education__cards__item">
     <div class="education__cards__item__logo">
-      <img :src="'src/assets/svg/' + images + '.svg'" :alt="images" />
+      <img :src="'./src/assets/svg/' + images + '.svg'" :alt="images" />
       <div>{{ title }}</div>
     </div>
     <div class="education__cards__item__title">{{ name }}</div>
