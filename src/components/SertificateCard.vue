@@ -12,7 +12,7 @@ export default {
   <div class="sertifiacate__cards__item">
     <div class="sertifiacate__cards__item-logo">
       <div class="sertifiacate__cards__item-logo__img">
-        <img src="../assets/svg/tools/vue.svg" alt="image" />
+        <img src="/assets/svg/tools/vue.svg" alt="image" />
       </div>
       <div class="sertifiacate__cards__item-logo__text">
         <div class="subtitle">{{ title }}</div>
@@ -30,7 +30,7 @@ export default {
         <img
           width="6"
           height="6"
-          src="../assets/svg/location.svg"
+          src="/assets/svg/location.svg"
           alt="location"
         />
         <div class="subtitle_font-small">{{ location }}</div>

@@ -12,7 +12,7 @@ export default {
   <div class="latest-projects__cards__item">
     <div class="latest-projects__cards__item-top">
       <div class="latest-projects__cards__item-top__logo">
-        <img :src="'./src/assets/svg/tools/' + image + '.svg'" :alt="image" />
+        <img :src="'/assets/svg/tools/' + image + '.svg'" :alt="image" />
       </div>
 
       <div class="latest-projects__cards__item-top__description">
@@ -26,7 +26,7 @@ export default {
     </div>
     <div class="latest-projects__cards__item-link">
       <div>
-        <img src="../assets/svg/link.svg" alt="link" />
+        <img src="/assets/svg/link.svg" alt="link" />
       </div>
       <a :href="link" class="latest-projects__cards__item-link__text underline">
         {{ link }}

@@ -33,7 +33,7 @@ export default {
             <img
               width="6"
               height="6"
-              src="../assets/svg/location.svg"
+              src="/assets/svg/location.svg"
               alt="location"
             />
             <div class="subtitle_font-small">Online</div>
@@ -42,7 +42,7 @@ export default {
 
         <div class="achievements__cards__item-content__experience-title">
           <img
-            :src="'./src/assets/svg/social/' + logo + '.svg'"
+            :src="'/assets/svg/social/' + logo + '.svg'"
             :alt="logo"
             class="achievements__cards__item-content__experience-title__img"
             width="25"

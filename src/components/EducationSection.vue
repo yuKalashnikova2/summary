@@ -20,14 +20,14 @@ export default {
       <EducationCard
         title="Kemerovo State University"
         date="2011 - 2015"
-        percentage="100"
+        :percentage="100"
         name="Computer Science and ICT (pedagogical education)"
         images="university"
       />
       <EducationCard
         title="Retraining courses"
         date="Aug 2016 - Nov 2016"
-        percentage="100"
+        :percentage="100"
         name="Russian language and literature (pedagogical education)"
         images="university"
        />

@@ -17,8 +17,8 @@ export default {
           isCard ? 'divider__card__circle__inside' : '',
         ]"
       >
-        <img src="../assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
-        <img src="../assets/svg/circle-inside.svg" alt="circle" v-else />
+        <img src="/assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
+        <img src="/assets/svg/circle-inside.svg" alt="circle" v-else />
       </div>
     </div>
 

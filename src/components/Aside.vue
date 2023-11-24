@@ -63,7 +63,7 @@ export default {
 <template>
   <div class="aside">
     <header class="aside__header">
-      <img src="../assets/logo.png" alt="logo" class="aside__header-logo" />
+      <img src="/assets/logo.png" alt="logo" class="aside__header-logo" />
       <h1 class="aside__header-title">Yuliya Kalashnikova</h1>
     </header>
 
@@ -79,11 +79,7 @@ export default {
           <div
             class="aside__infos__card-img aside__infos__card-img_background-gray"
           >
-            <img
-              :src="'./src/assets/svg/' + item.img + '.svg'"
-              :alt="item.img"
-         
-            />
+            <img :src="'/assets/svg/' + item.img + '.svg'" :alt="item.img" />
           </div>
 
           <div class="aside__infos__card-subtitle">
@@ -105,7 +101,7 @@ export default {
         <div class="aside__infos__card" v-for="social in socials">
           <div class="aside__infos__card-img">
             <img
-              :src="'./src/assets/svg/social/' + social.img + '.svg'"
+              :src="'/assets/svg/social/' + social.img + '.svg'"
               alt="email"
             />
           </div>
@@ -126,7 +122,7 @@ export default {
         <div class="aside__infos__card" v-for="language in languages">
           <div class="aside__infos__card-img">
             <img
-              :src="'./src/assets/svg/flags/' + language.img + '.svg'"
+              :src="'/assets/svg/flags/' + language.img + '.svg'"
               alt="email"
             />
           </div>
@@ -143,7 +139,7 @@ export default {
         <div class="aside__infos__card" v-for="hobbie in hobbies">
           <div class="aside__infos__card-img">
             <img
-              :src="'./src/assets/svg/hobbies/' + hobbie.img + '.svg'"
+              :src="'/assets/svg/hobbies/' + hobbie.img + '.svg'"
               :alt="hobbie.img"
             />
           </div>
@@ -159,7 +155,9 @@ export default {
         <div class="aside__infos__card" v-for="personal in personalDetails">
           <span class="subtitle-text">{{ personal.text }} </span>
 
-          <span class="subtitle-text subtitle-text_gray"> {{ personal.subtitle }}</span>
+          <span class="subtitle-text subtitle-text_gray">
+            {{ personal.subtitle }}</span
+          >
         </div>
       </div>
     </div>
@@ -218,7 +216,7 @@ export default {
   &__infos {
     &__card {
       display: flex;
-    
+
       align-items: center;
       &-img {
         width: 16px;

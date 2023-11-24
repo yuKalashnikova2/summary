@@ -11,7 +11,7 @@ export default {
 <template>
   <div class="tools__cards__item">
     <div class="tools__cards__item-logo">
-      <img :src="'./src/assets/svg/tools/' + image + '.svg'" :alt="image" />
+      <img :src="'/assets/svg/tools/' + image + '.svg'" :alt="image" />
     </div>
 
     <div class="tools__cards__item-text">
