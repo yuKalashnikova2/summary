@@ -82,8 +82,7 @@ export default {
             <img
               :src="'src/assets/svg/' + item.img + '.svg'"
               :alt="item.img"
-              width="10"
-              height="10"
+         
             />
           </div>
 
@@ -160,7 +159,7 @@ export default {
         <div class="aside__infos__card" v-for="personal in personalDetails">
           <span class="subtitle-text">{{ personal.text }} </span>
 
-          <span class="subtitle"> {{ personal.subtitle }}</span>
+          <span class="subtitle-text subtitle-text_gray"> {{ personal.subtitle }}</span>
         </div>
       </div>
     </div>
@@ -219,7 +218,7 @@ export default {
   &__infos {
     &__card {
       display: flex;
-      word-break: break-all;
+    
       align-items: center;
       &-img {
         width: 16px;
