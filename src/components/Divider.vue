@@ -33,6 +33,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (max-width: 577px) {
+    display: none;
+  }
   &__circle {
     display: flex;
     justify-content: center;

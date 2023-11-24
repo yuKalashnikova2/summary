@@ -41,6 +41,9 @@ export default {
   padding: 12px;
   border-radius: 4px 0px 0px 4px;
   max-width: 170px;
+  @media (max-width: 577px) {
+    max-width: 100%;
+  }
   &-top {
     display: flex;
     gap: 8px;

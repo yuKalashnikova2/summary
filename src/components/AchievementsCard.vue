@@ -72,6 +72,10 @@ export default {
   & > *:not(:last-child) {
     margin-right: 8px;
   }
+  @media (max-width: 577px) {
+    background-color: #F7F9FC;
+
+  }
   &-content {
     display: flex;
     & > *:not(:last-child) {

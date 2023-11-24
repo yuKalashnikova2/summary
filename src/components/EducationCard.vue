@@ -29,6 +29,9 @@ export default {
   background-color: #f7f9fc;
   padding: 8px 12px;
   max-width: 113px;
+  @media (max-width: 577px) {
+    max-width: 100%;
+  }
   &__logo {
     display: flex;
     align-items: center;
