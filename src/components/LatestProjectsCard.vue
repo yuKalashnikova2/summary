@@ -26,7 +26,18 @@ export default {
     </div>
     <div class="latest-projects__cards__item-link">
       <div>
-        <img src="/assets/svg/link.svg" alt="link" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
+          fill="none"
+        >
+          <path
+            d="M5.80907 13.4101C4.53458 13.4101 3.38558 12.6424 2.89777 11.4649C2.40996 10.2875 2.6794 8.93214 3.58047 8.0308L4.91788 6.69339L5.80907 7.58458L4.47229 8.92136C3.99459 9.39906 3.80802 10.0953 3.98287 10.7479C4.15772 11.4004 4.66742 11.9101 5.31997 12.085C5.97252 12.2598 6.66878 12.0733 7.14648 11.5956L8.48327 10.2588L9.37446 11.1506L8.03767 12.4874C7.44779 13.0802 6.64534 13.4124 5.80907 13.4101ZM6.25466 10.7044L5.36347 9.81318L9.82005 5.35661L10.7112 6.2478L6.25529 10.7037L6.25466 10.7044ZM11.1575 9.36759L10.2656 8.4764L11.6024 7.13961C12.0866 6.66335 12.2782 5.96397 12.1043 5.30743C11.9303 4.6509 11.4177 4.13809 10.7612 3.96401C10.1047 3.78993 9.40524 3.98133 8.92886 4.46542L7.59145 5.8022L6.70026 4.91101L8.03767 3.5736C9.26989 2.35213 11.2577 2.35648 12.4845 3.58334C13.7114 4.81019 13.7157 6.79796 12.4942 8.03017L11.1575 9.36696V9.36759Z"
+            fill="#516CF7"
+          />
+        </svg>
       </div>
       <a :href="link" class="latest-projects__cards__item-link__text underline">
         {{ link }}
@@ -40,23 +51,24 @@ export default {
   background-color: #f7f9fc;
   padding: 12px;
   border-radius: 4px 0px 0px 4px;
-  max-width: 170px;
-  @media (max-width: 577px) {
+  //   max-width: 170px;
+  @media (max-width: 767px) {
     max-width: 100%;
   }
   &-top {
     display: flex;
-    gap: 8px;
+    gap: 16px;
+    margin-bottom: 16px;
     &__logo {
       & img {
-        width: 24px;
-        height: 24px;
+        width: 48px;
+        height: 48px;
         border-radius: 8px;
       }
     }
     &__description {
       &-title {
-        margin-bottom: 2px;
+        margin-bottom: 4px;
       }
     }
   }
@@ -65,12 +77,27 @@ export default {
     align-items: center;
     gap: 6px;
     align-self: stretch;
+    & div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #e1e7fe;
+      border-radius: 100%;
+      width: 24px;
+      height: 24px;
+
+      & svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+
     &__text {
       color: #516cf7;
       font-family: 'Outfit', sans-serif;
-      font-size: 8px;
+      font-size: 16px;
       font-weight: 600;
-      line-height: 10px;
+      line-height: 20px;
     }
   }
 }

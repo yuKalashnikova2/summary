@@ -14,8 +14,8 @@ export default {
     AchievementsSection,
     ToolsSection,
     LatestProdjectsSection,
-    SertificateSection
-},
+    SertificateSection,
+  },
   data() {
     return {
       headersMainBlock: [
@@ -61,8 +61,11 @@ export default {
       >
         <EducationSection :header="headers.title" v-if="headers.type == 1" />
         <AchievementsSection :header="headers.title" v-if="headers.type == 2" />
-        <ToolsSection :header="headers.title" v-if="headers.type == 3"  />
-        <LatestProdjectsSection :header="headers.title" v-if="headers.type == 4" />
+        <ToolsSection :header="headers.title" v-if="headers.type == 3" />
+        <LatestProdjectsSection
+          :header="headers.title"
+          v-if="headers.type == 4"
+        />
         <SertificateSection :header="headers.title" v-if="headers.type == 5" />
       </MainBlock>
     </div>
@@ -71,11 +74,11 @@ export default {
 
 <style lang="scss">
 .container {
-  max-width: 594px;
+  max-width: 1198px;
   margin: 0 auto;
   display: flex;
 
-  @media (max-width: 577px) {
+  @media (max-width: 767px) {
     width: 100%;
     flex-direction: column;
   }

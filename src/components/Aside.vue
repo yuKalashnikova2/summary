@@ -35,7 +35,7 @@ export default {
           text: '@yuKalashnikova2',
         },
         {
-          img: 'li',
+          img: 'linkedin',
           subtitle: 'Linkedin',
           text: '@yul-vilaya-965a67279',
         },
@@ -74,12 +74,17 @@ export default {
     </p>
 
     <div class="aside__main">
-      <div class="aside__infos aside__block aside__block_border-gray gap-12">
+      <div class="aside__infos aside__block aside__block_border-gray gap-24">
         <div class="aside__infos__card" v-for="item in infos">
           <div
             class="aside__infos__card-img aside__infos__card-img_background-gray"
           >
-            <img :src="'/assets/svg/' + item.img + '.svg'" :alt="item.img" />
+            <img
+              width="20"
+              height="20"
+              :src="'/assets/svg/' + item.img + '.svg'"
+              :alt="item.img"
+            />
           </div>
 
           <div class="aside__infos__card-subtitle">
@@ -96,7 +101,7 @@ export default {
         </div>
       </div>
 
-      <div class="aside__socials aside__block aside__block_border-gray gap-10">
+      <div class="aside__socials aside__block aside__block_border-gray gap-20">
         <div class="subtitle">Socials</div>
         <div class="aside__infos__card" v-for="social in socials">
           <div class="aside__infos__card-img">
@@ -116,7 +121,7 @@ export default {
       </div>
 
       <div
-        class="aside__languages aside__block aside__block_border-gray gap-10"
+        class="aside__languages aside__block aside__block_border-gray gap-20"
       >
         <div class="subtitle">Languages</div>
         <div class="aside__infos__card" v-for="language in languages">
@@ -134,7 +139,7 @@ export default {
         </div>
       </div>
 
-      <div class="aside__hobbies gap-8">
+      <div class="aside__hobbies gap-16">
         <div class="subtitle">Hobbies & Interests</div>
         <div class="aside__infos__card" v-for="hobbie in hobbies">
           <div class="aside__infos__card-img">
@@ -150,7 +155,7 @@ export default {
         </div>
       </div>
 
-      <div class="aside__personal-details gap-8">
+      <div class="aside__personal-details gap-16">
         <div class="subtitle">Personal Details</div>
         <div class="aside__infos__card" v-for="personal in personalDetails">
           <span class="subtitle-text">{{ personal.text }} </span>
@@ -169,58 +174,53 @@ export default {
   display: flex;
   flex-direction: column;
   background-color: #f7fcff;
-  width: 176px;
+  max-width: 355px;
   padding: 24px 4px 0 24px;
-  @media (max-width: 577px) {
-    width: 100%;
+  @media (max-width: 767px) {
+    max-width: 100%;
   }
 
   &__header {
-    margin-bottom: 16px;
-    @media (max-width: 577px) {
+    margin-bottom: 32px;
+    @media (max-width: 767px) {
       text-align: center;
     }
     &-logo {
       border-radius: 100%;
-      width: 48px;
-      height: 48px;
-      @media (max-width: 577px) {
+      width: 96px;
+      height: 96px;
+      @media (max-width: 767px) {
         margin: 0 auto;
       }
     }
     &-title {
-      font-size: 16px;
+      font-size: 32px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 40px;
       letter-spacing: -2%;
       color: #2e2e48;
-      padding-top: 8px;
-      @media (max-width: 577px) {
-        font-size: 25px;
-      }
+      padding-top: 16px;
     }
   }
   &__about {
-    font-size: 9px;
+    font-size: 18px;
     font-weight: 500;
     color: #47516b;
     letter-spacing: 2%;
-    line-height: 12px;
-    padding-bottom: 5px;
-    @media (max-width: 577px) {
-      font-size: 12px;
-      line-height: 16px;
+    line-height: 24px;
+    padding-bottom: 10px;
+    @media (max-width: 767px) {
       border-bottom: 1px solid #e2e6ee;
+      padding-bottom: 20px;
     }
   }
   &__infos {
     &__card {
       display: flex;
-
       align-items: center;
       &-img {
-        width: 16px;
-        height: 16px;
+        width: 32px;
+        height: 32px;
 
         border-radius: 100%;
         display: flex;
@@ -228,7 +228,10 @@ export default {
         align-items: center;
       }
       &-subtitle {
-        margin-left: 8px;
+        margin-left: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
       }
     }
   }
@@ -238,7 +241,7 @@ export default {
   &__hobbies {
     display: flex;
     flex-direction: column;
-    @media (max-width: 577px) {
+    @media (max-width: 767px) {
       padding-top: 10px;
       padding-bottom: 10px;
     }
@@ -246,8 +249,8 @@ export default {
   &__personal-details {
     display: flex;
     flex-direction: column;
-    padding-top: 16px;
-    @media (max-width: 577px) {
+    padding-top: 32px;
+    @media (max-width: 767px) {
       padding-top: 10px;
     }
   }
@@ -256,9 +259,9 @@ export default {
 .aside__main {
   padding-right: 20px;
   padding-bottom: 30px;
-  @media (max-width: 577px) {
+  @media (max-width: 767px) {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 30px;
   }
 }
@@ -266,9 +269,9 @@ export default {
   display: flex;
   flex-direction: column;
 
-  padding-top: 16px;
-  padding-bottom: 16px;
-  @media (max-width: 577px) {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  @media (max-width: 767px) {
     padding-top: 10px;
     padding-bottom: 10px;
   }
@@ -278,8 +281,5 @@ export default {
 }
 .aside__block_border-gray {
   border-top: 1px solid #e2e6ee;
-  @media (max-width: 577px) {
-    border-top: none;
-  }
 }
 </style>

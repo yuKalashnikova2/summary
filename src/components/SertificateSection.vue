@@ -22,12 +22,14 @@ export default {
         title="Coursera"
         subtitle="Frontend Everyday (Vue 3 + Pinia)"
         date="Nov 2023 - April 2024"
+        image="vue"
         location="Online"
       />
       <SertificateCard
         title="Coursera"
         subtitle="Frontend Everyday (Vue 3 + Pinia)"
         date="Nov 2023 - April 2024"
+        image="vue"
         location="Online"
       />
     </div>

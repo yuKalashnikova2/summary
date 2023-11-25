@@ -23,12 +23,12 @@ export default {
 
 <style lang="scss">
 .tools__cards__item {
-  padding: 8px;
+  padding: 16px;
   background-color: #f7f9fc;
 
   &-logo {
-    width: 24px;
-    height: 24px;
+    width: 48px;
+    height: 48px;
     margin: 0 auto;
     margin-bottom: 4px;
     img {

@@ -14,12 +14,12 @@ export default {
 .content__title {
   color: #2e2e48;
   font-family: 'Outfit', sans-serif;
-  font-size: 12px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 16px;
-  letter-spacing: 0.12px;
-  @media (max-width: 577px) {
+  line-height: 32px;
+  letter-spacing: 0.242px;
+  @media (max-width: 767px) {
     text-align: center;
   }
 }

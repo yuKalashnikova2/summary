@@ -31,8 +31,8 @@ export default {
             class="achievements__cards__item-content__experience-date__online"
           >
             <img
-              width="6"
-              height="6"
+              width="12"
+              height="12"
               src="/assets/svg/location.svg"
               alt="location"
             />
@@ -45,8 +45,8 @@ export default {
             :src="'/assets/svg/social/' + logo + '.svg'"
             :alt="logo"
             class="achievements__cards__item-content__experience-title__img"
-            width="25"
-            height="25"
+            width="50"
+            height="50"
           />
           <div
             class="achievements__cards__item-content__experience-title__text"
@@ -72,28 +72,24 @@ export default {
   & > *:not(:last-child) {
     margin-right: 8px;
   }
-  @media (max-width: 577px) {
-    background-color: #F7F9FC;
-
+  @media (max-width: 767px) {
+    background-color: #f7f9fc;
   }
   &-content {
     display: flex;
-    & > *:not(:last-child) {
-      margin-right: 4px;
-      padding: 3px 0 8px 0;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+      padding: 15px;
     }
     &__experience {
       display: flex;
-      min-width: 120px;
       flex-direction: column;
+      flex-shrink: 0;
       gap: 4px;
 
       &-date {
         display: flex;
-        & > *:not(:last-child) {
-          margin-right: 2px;
-        }
-        margin-bottom: 4px;
+        gap: 8px;
         &__online {
           display: flex;
           & > *:not(:last-child) {
@@ -104,22 +100,26 @@ export default {
       &-title {
         display: flex;
         align-items: center;
-        gap: 2px;
+        gap: 4px;
         align-self: stretch;
         &__text {
           display: flex;
           flex-direction: column;
-          gap: 2px;
+          gap: 8px;
         }
         &__img {
-          width: 25px;
-          height: 25px;
-          margin-right: 8px;
+          width: 50px;
+          height: 50px;
+          margin-right: 16px;
         }
       }
     }
-    @media (max-width: 577px) {
+    &__description {
+      padding-left: 30px;
+    }
+    @media (max-width: 767px) {
       flex-direction: column;
+      gap: 10px;
     }
   }
 }

@@ -5,6 +5,7 @@ export default {
     subtitle: String,
     date: String,
     location: String,
+    image: String,
   },
 }
 </script>
@@ -12,7 +13,7 @@ export default {
   <div class="sertifiacate__cards__item">
     <div class="sertifiacate__cards__item-logo">
       <div class="sertifiacate__cards__item-logo__img">
-        <img src="/assets/svg/tools/vue.svg" alt="image" />
+        <img :src="'/assets/svg/tools/' + image + '.svg'" :alt="image" />
       </div>
       <div class="sertifiacate__cards__item-logo__text">
         <div class="subtitle">{{ title }}</div>
@@ -28,8 +29,8 @@ export default {
       </div>
       <div class="sertifiacate__cards__item-info__location">
         <img
-          width="6"
-          height="6"
+          width="12"
+          height="12"
           src="/assets/svg/location.svg"
           alt="location"
         />
@@ -41,23 +42,20 @@ export default {
 
 <style lang="scss">
 .sertifiacate__cards__item {
-  padding: 8px 12px;
+  padding: 16px 24px;
   display: flex;
   background-color: #f7f9fc;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  //   & > *:not(:last-child) {
-  //     margin-right: 6px;
-  //   }
   &-logo {
     display: flex;
     & > *:not(:last-child) {
-      margin-right: 6px;
+      margin-right: 12px;
     }
     &__img {
-      width: 22px;
-      height: 22px;
+      width: 45px;
+      height: 45px;
     }
     &__text {
       display: flex;
@@ -68,10 +66,10 @@ export default {
   &-info {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 4px;
     &__location {
       display: flex;
-      gap: 2px;
+      gap: 4px;
     }
   }
 }

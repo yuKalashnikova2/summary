@@ -27,46 +27,47 @@ export default {
 <style lang="scss">
 .education__cards__item {
   background-color: #f7f9fc;
-  padding: 8px 12px;
-  max-width: 113px;
-  @media (max-width: 577px) {
+  border-radius: 8.067px 0px 0px 8.067px;
+  padding: 16px 24px;
+  max-width: 180px;
+  @media (max-width: 767px) {
     max-width: 100%;
   }
   &__logo {
     display: flex;
     align-items: center;
     & img {
-      width: 19px;
-      height: 24px;
+      width: 38px;
+      height: 48px;
     }
     & div {
       color: #2e2e48;
-      font-size: 6px;
+      font-size: 12px;
       font-weight: 500;
-      line-height: 8px;
+      line-height: 16px;
       padding-left: 8px;
     }
   }
   &__title {
     color: #2e2e48;
-    font-size: 7px;
+    font-size: 14px;
     font-weight: 500;
-    line-height: 9px;
-    margin-top: 4px;
+    line-height: 18px;
+    margin-top: 8px;
   }
   &__date {
     color: #79819a;
-    font-size: 5px;
+    font-size: 10px;
     font-weight: 400;
-    letter-spacing: 0.05px;
+    letter-spacing: 0.1px;
   }
   &__percentage {
     color: #5d5fef;
 
-    font-size: 6px;
+    font-size: 12px;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 0.06px;
+    letter-spacing: 0.121px;
     & span {
       color: #79819a;
     }
