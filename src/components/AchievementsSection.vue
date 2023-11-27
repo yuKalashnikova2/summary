@@ -3,7 +3,10 @@ import ContentTitle from './ContentTitle.vue'
 import AchievementsCard from './AchievementsCard.vue'
 export default {
   props: {
-    header: String,
+    header: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     AchievementsCard,

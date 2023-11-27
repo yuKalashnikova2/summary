@@ -9,7 +9,10 @@ export default {
     }
   },
   props: {
-    header: String,
+    header: {
+        type: String,
+        required: true
+    },
   },
   components: {
     ToolsCard,

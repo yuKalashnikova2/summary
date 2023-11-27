@@ -1,11 +1,26 @@
 <script>
 export default {
   props: {
-    title: String,
-    subtitle: String,
-    date: String,
-    location: String,
-    image: String,
+    title: {
+      type: String,
+      default: 'Title',
+    },
+    subtitle: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      required: false,
+    },
+    location: {
+      type: String,
+      required: false,
+    },
+    image: {
+      type: String,
+      required: false,
+    },
   },
 }
 </script>
@@ -40,7 +55,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .sertifiacate__cards__item {
   padding: 16px 24px;
   display: flex;
@@ -73,7 +88,7 @@ export default {
       gap: 4px;
     }
     @media (max-width: 767px) {
-        display: none;
+      display: none;
     }
   }
 }

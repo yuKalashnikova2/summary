@@ -72,7 +72,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   max-width: 1198px;
   margin: 0 auto;

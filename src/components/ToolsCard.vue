@@ -1,10 +1,22 @@
 <script>
 export default {
   props: {
-    name: String,
-    image: String,
-    description: String,
-    isTools: Boolean,
+    name: {
+      type: String,
+      default: 'Java Script',
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: false,
+    },
+    isTools: {
+      type: Boolean,
+      required: false,
+    },
   },
 }
 </script>
@@ -27,7 +39,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .tools__cards__item {
   padding: 16px;
   background-color: #f7f9fc;

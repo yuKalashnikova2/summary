@@ -1,10 +1,22 @@
 <script>
 export default {
   props: {
-    title: String,
-    description: String,
-    image: String,
-    link: String,
+    title: {
+      type: String,
+      default: 'Title',
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    image: {
+      type: String,
+      required: true,
+    },
+    link: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
@@ -46,7 +58,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .latest-projects__cards__item {
   background-color: #f7f9fc;
   padding: 12px;

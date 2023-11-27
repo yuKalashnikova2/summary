@@ -1,11 +1,26 @@
 <script>
 export default {
   props: {
-    title: String,
-    name: String,
-    date: String,
-    percentage: Number,
-    images: String,
+    title: {
+      type: String,
+      default: 'Title',
+    },
+    name: {
+      type: String,
+      default: 'Name',
+    },
+    date: {
+      type: String,
+      required: true,
+    },
+    percentage: {
+      type: String,
+      required: true,
+    },
+    images: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
@@ -24,7 +39,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .education__cards__item {
   background-color: #f7f9fc;
   border-radius: 8.067px 0px 0px 8.067px;
@@ -41,7 +56,6 @@ export default {
       width: 38px;
       height: 48px;
     }
-
   }
   &__title {
     color: #2e2e48;

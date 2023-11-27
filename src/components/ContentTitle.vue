@@ -1,7 +1,10 @@
 <script>
 export default {
   props: {
-    title: String,
+    title: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
@@ -10,7 +13,7 @@ export default {
   <h2 class="content__title">{{ title }}</h2>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .content__title {
   color: #2e2e48;
   font-family: 'Outfit', sans-serif;

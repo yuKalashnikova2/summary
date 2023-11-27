@@ -4,7 +4,10 @@ import LatestProjectsCard from './LatestProjectsCard.vue'
 
 export default {
   props: {
-    header: String,
+    header: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     ContentTitle,

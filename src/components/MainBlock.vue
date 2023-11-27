@@ -7,10 +7,13 @@ export default {
   components: {
     ContentTitle,
     EducationCard,
-    Divider
+    Divider,
   },
   props: {
-    header: String,
+    header: {
+      type: String,
+      required: true,
+    },
   },
 }
 </script>
@@ -22,6 +25,4 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
-
-</style>
+<style lang="scss" scoped></style>

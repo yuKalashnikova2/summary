@@ -3,7 +3,10 @@ import ContentTitle from './ContentTitle.vue'
 import EducationCard from './EducationCard.vue'
 export default {
   props: {
-    header: String,
+    header: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     EducationCard,
@@ -30,7 +33,7 @@ export default {
         :percentage="100"
         name="Russian language and literature (pedagogical education)"
         images="university"
-       />
+      />
     </div>
   </div>
 </template>

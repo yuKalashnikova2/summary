@@ -1,7 +1,10 @@
 <script>
 export default {
   props: {
-    isCard: Boolean,
+    isCard: {
+      type: Boolean,
+      required: false,
+    },
   },
 }
 </script>
@@ -30,7 +33,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .divider__block {
   display: flex;
   flex-direction: column;

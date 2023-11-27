@@ -7,11 +7,26 @@ export default {
     }
   },
   props: {
-    subtitle: String,
-    title: String,
-    date: String,
-    decription: String,
-    logo: String,
+    subtitle: {
+      type: String,
+      default: 'Subtitle',
+    },
+    title: {
+      type: String,
+      default: 'Title',
+    },
+    date: {
+      type: String,
+      required: false,
+    },
+    decription: {
+      type: String,
+      required: false,
+    },
+    logo: {
+      type: String,
+      required: true,
+    },
   },
   components: {
     Divider,
@@ -66,7 +81,7 @@ export default {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .achievements__cards__item {
   display: flex;
   & > *:not(:last-child) {
@@ -97,6 +112,9 @@ export default {
           & > *:not(:last-child) {
             margin-right: 2px;
           }
+        }
+        @media (max-width: 767px) {
+            display: none;
         }
       }
       &-title {
