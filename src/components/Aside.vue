@@ -176,20 +176,22 @@ export default {
   background-color: #f7fcff;
   max-width: 355px;
   padding: 24px 4px 0 24px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     max-width: 100%;
   }
 
   &__header {
     margin-bottom: 32px;
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       text-align: center;
     }
     &-logo {
       border-radius: 100%;
       width: 96px;
       height: 96px;
-      @media (max-width: 767px) {
+      object-fit: cover;
+
+      @media (max-width: 992px) {
         margin: 0 auto;
       }
     }
@@ -200,18 +202,22 @@ export default {
       letter-spacing: -2%;
       color: #2e2e48;
       padding-top: 16px;
+      @media (max-width: 992px) {
+        font-size: 36px;
+      }
     }
   }
   &__about {
     font-size: 18px;
     font-weight: 500;
     color: #47516b;
-    letter-spacing: 2%;
+    letter-spacing: 0.363px;
     line-height: 24px;
     padding-bottom: 10px;
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       border-bottom: 1px solid #e2e6ee;
       padding-bottom: 20px;
+      font-size: 22px;
     }
   }
   &__infos {
@@ -226,6 +232,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-shrink: 0;
       }
       &-subtitle {
         margin-left: 16px;
@@ -241,7 +248,7 @@ export default {
   &__hobbies {
     display: flex;
     flex-direction: column;
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       padding-top: 10px;
       padding-bottom: 10px;
     }
@@ -250,7 +257,7 @@ export default {
     display: flex;
     flex-direction: column;
     padding-top: 32px;
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       padding-top: 10px;
     }
   }
@@ -259,7 +266,7 @@ export default {
 .aside__main {
   padding-right: 20px;
   padding-bottom: 30px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -271,7 +278,7 @@ export default {
 
   padding-top: 32px;
   padding-bottom: 32px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     padding-top: 10px;
     padding-bottom: 10px;
   }

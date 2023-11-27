@@ -4,12 +4,18 @@ export default {
     name: String,
     image: String,
     description: String,
+    isTools: Boolean,
   },
 }
 </script>
 
 <template>
-  <div class="tools__cards__item">
+  <div
+    :class="[
+      'tools__cards__item',
+      isTools ? 'tools__cards__item-tools' : 'tools__cards__item-skills',
+    ]"
+  >
     <div class="tools__cards__item-logo">
       <img :src="'/assets/svg/tools/' + image + '.svg'" :alt="image" />
     </div>
@@ -25,7 +31,12 @@ export default {
 .tools__cards__item {
   padding: 16px;
   background-color: #f7f9fc;
-
+  &-tools {
+    min-width: 277px;
+  }
+  &-skills {
+    min-width: 133px;
+  }
   &-logo {
     width: 48px;
     height: 48px;

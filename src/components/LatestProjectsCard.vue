@@ -52,8 +52,13 @@ export default {
   padding: 12px;
   border-radius: 4px 0px 0px 4px;
   //   max-width: 170px;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     max-width: 100%;
+  }
+  @media (min-width: 768px) and (max-width: 992px) {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
   &-top {
     display: flex;

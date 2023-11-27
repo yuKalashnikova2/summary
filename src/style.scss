@@ -28,12 +28,15 @@ a {
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
-  letter-spacing: 1%;
   color: #79819a;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     font-size: 20px;
     line-height: 24px;
   }
+  &_black {
+    color: #2E2E48;
+  }
+ 
   &_font-medium {
     font-size: 14px;
     line-height: 18px;
@@ -46,7 +49,9 @@ a {
     &_dark {
       color: #47516b;
     }
-   
+   @media (max-width: 992px) {
+    font-size: 14px ;
+   }
   }
 }
 .subtitle-text {
@@ -65,10 +70,13 @@ a {
     color: #79819a;
   }
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     font-size: 22px;
     line-height: 30px;
     font-weight: 400;
+  }
+  @media (max-width: 576px) {
+    word-break: break-all;
   }
 }
 
@@ -93,7 +101,7 @@ a {
   }
 }
 .section {
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -102,14 +110,23 @@ a {
   &__cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 8px;
     margin-top: 32px;
     margin-bottom: 48px;
     &_gap-medium {
       gap: 8px;
     }
+    &_no-wrap {
+      flex-wrap: nowrap;
+    }
+    &_margin-bottom-0 {
+      margin-bottom: 0;
+    }
+    &_margin-top-small {
+      margin-top: 8px;
+    }
 
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       flex-direction: column;
       width: 100%;
       margin-bottom: 28px;

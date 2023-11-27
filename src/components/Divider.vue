@@ -17,8 +17,10 @@ export default {
           isCard ? 'divider__card__circle__inside' : '',
         ]"
       >
-        <img src="/assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
-        <img src="/assets/svg/circle-inside.svg" alt="circle" v-else />
+        <!-- <img src="/assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
+        <img src="/assets/svg/circle-inside.svg" alt="circle" v-else /> -->
+        <div class="divider__card__circle__inside-black" v-if="isCard"></div>
+        <div class="divider__block__circle__inside-violet" v-else></div>
       </div>
     </div>
 
@@ -33,7 +35,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     display: none;
   }
   &__circle {
@@ -47,10 +49,19 @@ export default {
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04) inset,
       0px 6px 24px 0px rgba(0, 0, 0, 0.04), 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
     &__inside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 20px;
       height: 20px;
       flex-shrink: 0;
       border-radius: 100%;
+      &-violet {
+        width: 9px;
+        height: 9px;
+        background-color: #5531a7;
+        border-radius: 100%;
+      }
     }
   }
   &__band {
@@ -65,8 +76,17 @@ export default {
   &__circle {
     box-shadow: none;
     &__inside {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 15px;
       height: 15px;
+      &-black {
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: #2e2e48;
+      }
     }
   }
   &__band {

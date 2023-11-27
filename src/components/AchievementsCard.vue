@@ -72,16 +72,17 @@ export default {
   & > *:not(:last-child) {
     margin-right: 8px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     background-color: #f7f9fc;
   }
   &-content {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       padding: 15px;
     }
     &__experience {
+      min-width: 242px;
       display: flex;
       flex-direction: column;
       flex-shrink: 0;
@@ -92,6 +93,7 @@ export default {
         gap: 8px;
         &__online {
           display: flex;
+          align-items: center;
           & > *:not(:last-child) {
             margin-right: 2px;
           }
@@ -117,7 +119,7 @@ export default {
     &__description {
       padding-left: 30px;
     }
-    @media (max-width: 767px) {
+    @media (max-width: 992px) {
       flex-direction: column;
       gap: 10px;
     }

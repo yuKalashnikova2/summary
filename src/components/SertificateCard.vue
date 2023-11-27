@@ -69,7 +69,11 @@ export default {
     gap: 4px;
     &__location {
       display: flex;
+      align-items: center;
       gap: 4px;
+    }
+    @media (max-width: 767px) {
+        display: none;
     }
   }
 }

@@ -78,7 +78,7 @@ export default {
   margin: 0 auto;
   display: flex;
 
-  @media (max-width: 767px) {
+  @media (max-width: 992px) {
     width: 100%;
     flex-direction: column;
   }

@@ -29,7 +29,7 @@ export default {
         title="Winter of Code"
         date="Oct 2023 - Nov 2023"
         decription="Overwhelming to be a part of DSC NSEC project - DSC NSEC Algorithms for Winter of Code 2020. First introduction to Git and Github. How github is used by most of the programmers in order to manage the projects."
-        logo="5"
+        logo="google"
       />
       <AchievementsCard
         subtitle="30Days of Google Cloud"
