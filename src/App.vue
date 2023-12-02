@@ -75,6 +75,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   max-width: 1198px;
+  overflow-x: hidden;
   margin: 0 auto;
   display: flex;
 

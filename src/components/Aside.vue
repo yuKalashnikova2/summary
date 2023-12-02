@@ -215,7 +215,6 @@ export default {
     line-height: 24px;
     padding-bottom: 10px;
     @media (max-width: 992px) {
-      border-bottom: 1px solid #e2e6ee;
       padding-bottom: 20px;
       font-size: 22px;
     }

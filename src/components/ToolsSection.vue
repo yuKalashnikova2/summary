@@ -26,7 +26,7 @@ export default {
     <ContentTitle :title="header" />
 
     <div
-      class="section__cards section__cards_no-wrap section__cards_margin-bottom-0"
+      class="section__cards section__cards_margin-bottom-0"
     >
       <ToolsCard
         name="Figma"

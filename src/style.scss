@@ -34,9 +34,9 @@ a {
     line-height: 24px;
   }
   &_black {
-    color: #2E2E48;
+    color: #2e2e48;
   }
- 
+
   &_font-medium {
     font-size: 14px;
     line-height: 18px;
@@ -49,9 +49,9 @@ a {
     &_dark {
       color: #47516b;
     }
-   @media (max-width: 992px) {
-    font-size: 14px ;
-   }
+    @media (max-width: 992px) {
+      font-size: 14px;
+    }
   }
 }
 .subtitle-text {
@@ -64,7 +64,7 @@ a {
   }
   &_medium {
     font-size: 16px;
-    line-height: 20px; 
+    line-height: 20px;
   }
   &_gray {
     color: #79819a;
@@ -115,9 +115,6 @@ a {
     margin-bottom: 48px;
     &_gap-medium {
       gap: 8px;
-    }
-    &_no-wrap {
-      flex-wrap: nowrap;
     }
     &_margin-bottom-0 {
       margin-bottom: 0;

@@ -12,7 +12,10 @@ export default {
 <template>
   <div class="divider__block">
     <div
-      :class="['divider__block__circle', isCard ? 'divider__card__circle' : '']"
+      :class="[
+        'divider__block__circle',
+        isCard ? 'divider__card__circle' : 'divider__block__circle_hight',
+      ]"
     >
       <div
         :class="[
@@ -20,8 +23,6 @@ export default {
           isCard ? 'divider__card__circle__inside' : '',
         ]"
       >
-        <!-- <img src="/assets/svg/circle-inside-card.svg" alt="" v-if="isCard" />
-        <img src="/assets/svg/circle-inside.svg" alt="circle" v-else /> -->
         <div class="divider__card__circle__inside-black" v-if="isCard"></div>
         <div class="divider__block__circle__inside-violet" v-else></div>
       </div>
@@ -46,11 +47,13 @@ export default {
     justify-content: center;
     align-items: center;
     width: 32px;
-    height: 32px;
     border-radius: 100px;
     background: #fff;
     box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.04) inset,
       0px 6px 24px 0px rgba(0, 0, 0, 0.04), 0px 1px 4px 0px rgba(0, 0, 0, 0.05);
+    &_hight {
+      height: 32px;
+    }
     &__inside {
       display: flex;
       align-items: center;
